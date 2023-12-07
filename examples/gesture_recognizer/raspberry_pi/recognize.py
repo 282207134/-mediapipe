@@ -180,7 +180,7 @@ def run(model: str, num_hands: int,
       recognition_result_list.clear()
 
     if recognition_frame is not None:
-        cv2.imshow('../../../model/gesture_recognition', recognition_frame)
+        cv2.imshow('gesture_recognizer', recognition_frame)
 
     # Stop the program if the ESC key is pressed.
     if cv2.waitKey(1) == 27:
@@ -232,12 +232,12 @@ def main():
       '--frameWidth',
       help='Width of frame to capture from camera.',
       required=False,
-      default=640)
+      default=1920)#默认640
   parser.add_argument(
       '--frameHeight',
       help='Height of frame to capture from camera.',
       required=False,
-      default=480)
+      default=1080)#默认480
   args = parser.parse_args()
 
   run(args.model, int(args.numHands), args.minHandDetectionConfidence,

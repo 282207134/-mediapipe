@@ -1,3 +1,6 @@
+#先进入目录然后执行 python classify.py --inputText "test文字"
+
+
 # Copyright 2023 The MediaPipe Authors. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -50,7 +53,7 @@ def main():
   parser.add_argument(
       '--inputText',
       help='Enter the text to classify.',
-      required=True)
+      required=True)#默认为True
   args = parser.parse_args()
 
   run(args.model, args.inputText)

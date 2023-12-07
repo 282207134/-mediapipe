@@ -32,6 +32,12 @@ pose = mp_pose.Pose()
 
 # 读取摄像头
 cap = cv2.VideoCapture(0)
+#在上面代码后添加下面代码可更改分辨率
+frame_width, frame_height = 1920, 1080  # 设置为你想要的分辨率
+cap.set(3, frame_width)
+cap.set(4, frame_height)
+
+
 
 while cap.isOpened():
     ret, frame = cap.read()
